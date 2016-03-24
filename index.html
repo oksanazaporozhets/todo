@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="bubble sort">
+  <meta name="author" content="Oksana Zaporozhets">
+  <title>My checklist</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body ng-app="AppToDo">
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <span class="navbar-brand">My checklist</span>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="content row" ng-controller="TodoController">
+    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 todo-counter-block">
+      <h1> {{getTasksNumber()}} </h1>
+      <h4> Tasks left</h4>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 todo-main-content">
+      <div class="add-task-menu">
+        <h2>My tasks:</h2>
+
+        <form class="form-inline">
+          <div class="form-group input-task-text">
+            <input type="text" class="form-control" ng-model="formTodoText" ng-model-instant placeholder="Enter task">
+          </div>
+          <div class="form-group">
+            <div class='input-group date' id='datetimepicker1'>
+              <input type='text' class="form-control" ng-model="formTodoDate" ng-model-instant placeholder="Enter date" />
+                                <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+            </div>
+          </div>
+          <button class="btn btn-primary add-task-btn" ng-click="addTask()">add task</button>
+        </form>
+      </div>
+
+      <table class="table table-hover">
+        <tbody class="taskTable">
+        <tr ng-repeat="todo in todoTasks">
+          <td><input type="checkbox" ng-model="todo.done" /></td>
+          <td><span class="completed-{{todo.done}}">{{todo.text}}</span></td>
+          <td><span>{{todo.date}}</span></td>
+          <td>
+            <p><span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="deleteTask($index)"></span></p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <button class="clear-btn btn btn-primary" ng-click="clearCompleted()">Clear completed</button>
+
+    </div>
+  </div>
+</div>
+<script src="js/app.js"></script>
+<script src="js/controllers/mainController.js"></script>
+
+
+</body>
+
+</html>

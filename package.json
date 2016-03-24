@@ -1,0 +1,28 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "'Simple todo app'",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oksanazaporozhets/todo.git"
+  },
+  "author": "Oksana Zaporozhets",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oksanazaporozhets/todo/issues"
+  },
+  "homepage": "https://github.com/oksanazaporozhets/todo#readme",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-minify-css": "^1.0.0",
+    "gulp-less": "^3.0.5"
+  }
+}
