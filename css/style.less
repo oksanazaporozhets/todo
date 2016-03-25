@@ -1,0 +1,80 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+
+@blue: #106fb2;
+
+body {
+  background-color: #f7f7f7;
+}
+
+.navbar.navbar-fixed-top {
+  background-color: #106fb2;
+  .navbar-brand{
+    color: #fff;
+    font-size: 1.7em;
+  }
+}
+
+.content {
+  margin-top: 50px;
+  font-family: 'Open Sans',serif, Helvetica;
+  /*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+}
+
+.todo-main-content {
+  border: 2px solid #eee;
+  background: #fff;
+  margin-top: 20px;
+  padding: 10px 40px 10px 40px;
+  .taskTable td {
+    line-height: 2em;
+    padding: 10px 0 0px 10px;
+    font-size: 1.2em;
+    .completed-true{
+      text-decoration: line-through;
+      color: #777!important;
+    }
+    .glyphicon-remove{
+      opacity: 0.5;
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.todo-counter-block {
+  text-align: center;
+  padding-right: 50px;
+  h1{
+    font-weight: bold;
+    color: @blue;
+    font-size: 6em;
+  }
+  h4{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #999;
+  }
+}
+
+.add-task-menu{
+  padding-bottom: 25px;
+  h2 {
+    font-weight: bold;
+    padding: 10px;
+    font-size: 2em;
+  }
+  .input-task-text{
+    width: 57%;
+    input{
+      width: 100%;
+    }
+  }
+  .form-group.date-input-form {
+    width: 24%!important;
+  }
+  .add-task-btn{
+    width: 15%;
+
+  }
+}
