@@ -63,7 +63,9 @@ body {
 .add-task-menu .input-task-text input {
   width: 100%;
 }
+.add-task-menu .form-group.date-input-form {
+  width: 24%!important;
+}
 .add-task-menu .add-task-btn {
-  padding-left: 30px;
-  padding-right: 30px;
+  width: 15%;
 }
